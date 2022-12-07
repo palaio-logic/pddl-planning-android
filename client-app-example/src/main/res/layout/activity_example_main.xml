@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ExampleClientActivity">
+    tools:context="eu.palaio.pddlplanning.example.client.ExampleClientActivity">
 
     <TextView
         android:id="@+id/mainText"

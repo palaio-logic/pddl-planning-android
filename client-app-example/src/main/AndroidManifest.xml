@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.softbankrobotics.pddlplanning.example.client">
+    package="eu.palaio.pddlplanning.example.client">
 
     <!-- To be allowed to bind the planner service -->
-    <uses-permission android:name="com.softbankrobotics.planning.SEARCH_PLANS" />
+    <uses-permission android:name="eu.palaio.planning.SEARCH_PLANS" />
 
     <!-- To see the planner service -->
     <queries>
         <package android:name="com.commonsware.android.r.embed.server" />
         <intent>
-            <action android:name="com.softbankrobotics.planning.action.SEARCH_PLANS_FROM_PDDL" />
+            <action android:name="eu.palaio.planning.action.SEARCH_PLANS_FROM_PDDL" />
         </intent>
-        <package android:name="com.softbankrobotics.pddlplanning.example.service" />
+        <package android:name="eu.palaio.pddlplanning.example.service" />
     </queries>
 
     <application
@@ -19,7 +19,7 @@
         android:label="@string/app_name"
         android:theme="@style/Theme.Planning">
         <activity
-            android:name=".ExampleClientActivity"
+            android:name="eu.palaio.pddlplanning.example.client.ExampleClientActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

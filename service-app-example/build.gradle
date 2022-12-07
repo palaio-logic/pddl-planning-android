@@ -8,7 +8,7 @@ android {
     buildToolsVersion "33.0.0"
 
     defaultConfig {
-        applicationId "com.softbankrobotics.pddlplanning.example.service"
+        applicationId "eu.palaio.pddlplanning.example.service"
         minSdkVersion 23
         targetSdkVersion 33
         versionCode 1
