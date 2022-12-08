@@ -106,7 +106,7 @@ typealias PermissionCheckFunction = () -> Deferred<Unit>
 /**
  * The recommended permission to use for services providing plan search functions.
  */
-const val SEARCH_PLANS_PERMISSION = "eu.palaio.planning.SEARCH_PLANS"
+const val SEARCH_PLANS_PERMISSION = "eu.palaio.pddlplanning.permission.SEARCH_PLANS"
 
 /**
  * Create a PlanSearchFunction implemented by a service identified with the given intent.

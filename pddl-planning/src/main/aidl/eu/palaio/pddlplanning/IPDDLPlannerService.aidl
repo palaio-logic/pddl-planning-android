@@ -9,7 +9,7 @@ interface IPDDLPlannerService {
     /**
      * Recommended intent action to trigger a PDDL planner service.
      */
-    const String ACTION_SEARCH_PLANS_FROM_PDDL = "eu.palaio.planning.action.SEARCH_PLANS_FROM_PDDL";
+    const String ACTION_SEARCH_PLANS_FROM_PDDL = "eu.palaio.pddlplanning.action.SEARCH_PLANS_FROM_PDDL";
 
     /**
      * Searches for a solution plan for the given PDDL domain and problem.

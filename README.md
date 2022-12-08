@@ -48,11 +48,11 @@ and pass it to a mocked `PlanSearchFunction`.
 ## Usage around a service
 
 The service must implement the [AIDL interface](pddl-planning/src/main/aidl/eu/palaio/pddlplanning/IPDDLPlannerService.aidl)
-and declare the permission `eu.palaio.planning.SEARCH_PLANS` in the manifest.
+and declare the permission `eu.palaio.pddlplanning.permission.SEARCH_PLANS` in the manifest.
 
 ```xml
 <permission
-    android:name="eu.palaio.planning.SEARCH_PLANS"
+    android:name="eu.palaio.pddlplanning.permission.SEARCH_PLANS"
     android:protectionLevel="normal" />
 ```
 
@@ -62,16 +62,16 @@ and declare the permission `eu.palaio.planning.SEARCH_PLANS` in the manifest.
 Then require that permission to bind to the service,
 by adding this attribute to the `service` declaration in the manifest:
 ```xml
-android:permission="eu.palaio.planning.SEARCH_PLANS"
+android:permission="eu.palaio.pddlplanning.permission.SEARCH_PLANS"
 ```
 
 We recommend the service should respond to the intent
-`eu.palaio.planning.action.SEARCH_PLANS_FROM_PDDL`.
+`eu.palaio.pddlplanning.action.SEARCH_PLANS_FROM_PDDL`.
 In the manifest, it means adding this to the `service` declaration:
 
 ```xml
 <intent-filter>
-    <action android:name="eu.palaio.planning.action.SEARCH_PLANS_FROM_PDDL" />
+    <action android:name="eu.palaio.pddlplanning.action.SEARCH_PLANS_FROM_PDDL" />
     <category android:name="android.intent.category.DEFAULT" />
 </intent-filter>
 ```
@@ -88,13 +88,13 @@ the following in the `manifest` node:
 
 ```xml
 <!-- To be allowed to bind the planner service -->
-<uses-permission android:name="eu.palaio.planning.SEARCH_PLANS" />
+<uses-permission android:name="eu.palaio.pddlplanning.permission.SEARCH_PLANS" />
 
 <!-- To see the planner service -->
 <queries>
     <package android:name="com.commonsware.android.r.embed.server" />
     <intent>
-        <action android:name="eu.palaio.planning.action.SEARCH_PLANS_FROM_PDDL" />
+        <action android:name="eu.palaio.pddlplanning.action.SEARCH_PLANS_FROM_PDDL" />
     </intent>
     <package android:name="eu.palaio.pddlplanning.example.service" />
 </queries>

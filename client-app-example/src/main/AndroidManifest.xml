@@ -2,13 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!-- To be allowed to bind the planner service -->
-    <uses-permission android:name="eu.palaio.planning.SEARCH_PLANS" />
+    <uses-permission android:name="eu.palaio.pddlplanning.permission.SEARCH_PLANS" />
 
     <!-- To see the planner service -->
     <queries>
         <package android:name="com.commonsware.android.r.embed.server" />
         <intent>
-            <action android:name="eu.palaio.planning.action.SEARCH_PLANS_FROM_PDDL" />
+            <action android:name="eu.palaio.pddlplanning.action.SEARCH_PLANS_FROM_PDDL" />
         </intent>
         <package android:name="eu.palaio.pddlplanning.example.service" />
     </queries>

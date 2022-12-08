@@ -3,7 +3,7 @@
 
     <!-- Declares a permission, later used byt the planner service. -->
     <permission
-        android:name="eu.palaio.planning.SEARCH_PLANS"
+        android:name="eu.palaio.pddlplanning.permission.SEARCH_PLANS"
         android:protectionLevel="normal" />
 
     <application
@@ -24,9 +24,9 @@
         <service
             android:name=".ExamplePDDLPlannerService"
             android:exported="true"
-            android:permission="eu.palaio.planning.SEARCH_PLANS">
+            android:permission="eu.palaio.pddlplanning.permission.SEARCH_PLANS">
             <intent-filter>
-                <action android:name="eu.palaio.planning.action.SEARCH_PLANS_FROM_PDDL" />
+                <action android:name="eu.palaio.pddlplanning.action.SEARCH_PLANS_FROM_PDDL" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </service>
