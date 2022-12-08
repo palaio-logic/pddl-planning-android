@@ -76,7 +76,7 @@ suspend fun searchPlan(
     val domain = createDomain(types, constants, predicates, actions)
     // Sometimes constants may be repeated in the :init section.
     // Certain planners do not like this, so let us avoid that.
-    val problem = createProblem(objects - constants, init, goals)
+    val problem = createProblem(objects - constants.toSet(), init, goals)
     return planSearchFunction(domain, problem, null)
 }
 

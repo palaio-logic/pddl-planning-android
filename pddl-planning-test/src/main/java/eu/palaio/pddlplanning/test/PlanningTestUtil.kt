@@ -48,22 +48,6 @@ suspend fun checkPlansForInits(
 
 /**
  * Loads a domain & problem from a raw resources, and runs a planning function on it.
- * The result plan is printed to the debug output.
- */
-fun searchPlanAndPrint(
-    context: Context,
-    resourceName: String,
-    searchPlan: PlanSearchFunction,
-    logFunction: LogFunction
-) {
-    val pddl = stringFromRawResourceName(context, resourceName)
-    val (domain, problem) = splitDomainAndProblem(pddl)
-    val plan = runBlocking { searchPlan(domain, problem, logFunction) }
-    logFunction("Plan: $plan")
-}
-
-/**
- * Loads a domain & problem from a raw resources, and runs a planning function on it.
  * The result plan is returned.
  */
 fun searchPlanFromResource(
@@ -89,10 +73,4 @@ fun domainAndProblemFromRaw(context: Context, id: Int): Pair<String, String> {
 fun stringFromRawResource(context: Context, id: Int): String {
     val input = context.resources.openRawResource(id)
     return String(input.readBytes(), Charsets.UTF_8)
-}
-
-fun stringFromRawResourceName(context: Context, resourceName: String): String {
-    val resourceId =
-        context.resources.getIdentifier(resourceName, "raw", context.packageName)
-    return stringFromRawResource(context, resourceId)
 }
