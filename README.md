@@ -1,7 +1,7 @@
 # PDDL Planning for Android
 
-![](https://img.shields.io/maven-central/v/eu.palaio.pddl/pddl-planning "latest version on Maven Central")
-![](https://img.shields.io/github/workflow/status/aldebaran/pddl-planning-android/Android%20CI "master build state")
+![](https://img.shields.io/maven-central/v/eu.palaio/pddl-planning "latest version on Maven Central")
+![](https://img.shields.io/github/workflow/status/palaio-logic/pddl-planning-android/Android%20CI "master build state")
 
 This project provides a library to interface third-party PDDL planners on Android.
 
@@ -35,7 +35,7 @@ allprojects {
 Then add the following dependency in your module's `build.gradle`:
 
 ```groovy
-implementation 'eu.palaio.pddl:pddl-planning:1.4.2'
+implementation 'eu.palaio.pddl:pddl-planning:1.5.0'
 ```
 
 The `PlanSearchFunction` should be provided by another library implementing a planner,
@@ -110,7 +110,7 @@ It also includes some PDDL tests that you can run with a third-party planner.
 Add the following test dependency in your module's `build.gradle`:
 
 ```groovy
-androidTestImplementation 'eu.palaio.pddl:pddl-planning-test:1.4.2'
+androidTestImplementation 'eu.palaio.pddl:pddl-planning-test:1.5.0'
 ```
 
 Then, let a test extend the interface
@@ -122,7 +122,7 @@ See the [example tests](pddl-planning-test/src/androidTest/java/eu/palaio/pddlpl
 You can also get only the non-instrumented tests by defining the following dependency:
 
 ```groovy
-testImplementation 'eu.palaio.pddl:pddl-planning-test:1.4.2'
+testImplementation 'eu.palaio.pddl:pddl-planning-test:1.5.0'
 ```
 
 Then, let a test extend the interface
